@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>스튜디오 나나 2</title>
+  <meta name="description" content="스튜디오 나나 — 통통 튀는 캐릭터를 만나고 협업 문의를 보낼 수 있는 홈페이지">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=1">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="skip" href="#main">본문으로 바로 가기</a>
+
+  <!-- 1. 맨 위 메뉴 -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#top"><span class="logo-dot" aria-hidden="true"></span>스튜디오 나나</a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="nav">☰</button>
+      <nav class="nav" id="nav" aria-label="주 메뉴">
+        <ul>
+          <li><a href="#about">소개</a></li>
+          <li><a href="#characters">캐릭터</a></li>
+          <li><a href="#gallery">갤러리</a></li>
+          <li><a href="#contact">문의</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- 2. 첫 화면 -->
+    <section class="section hero" id="top">
+      <span class="circle c1" data-speed="0.12" aria-hidden="true"></span>
+      <span class="circle c2" data-speed="-0.08" aria-hidden="true"></span>
+      <span class="circle c3" data-speed="0.2" aria-hidden="true"></span>
+      <div class="container hero-inner">
+        <div class="reveal">
+          <span class="label">Character Studio</span>
+          <h1>나나의 <span class="hl-green">캐릭터</span>가<br>놀러 왔어요!</h1>
+          <p class="hero-sub">새콤달콤 통통 튀는 친구들이에요. 같이 놀고, 같이 일할 분을 기다려요.</p>
+          <!-- 구글 폼 주소는 script.js 맨 위 FORM_URL 에 넣어요 -->
+          <a class="btn js-form-btn" href="#contact">협업 문의하기</a>
+        </div>
+        <div class="hero-art reveal">
+          <img src="images/nana-cat.png" alt="복숭아빛 꼬리를 가진 귀여운 나나 고양이" width="520" height="520">
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. 큰 숫자 -->
+    <section class="section number" id="about">
+      <div class="container">
+        <div class="number-row reveal">
+          <div class="big-number" aria-label="2026">2026</div>
+          <div class="number-text">
+            <span class="label">About Nana</span>
+            <h2>첫인사를 드리는 <span class="hl-green">해</span></h2>
+            <p>스튜디오 나나가 새 홈페이지로 처음 인사해요. 아이와 가족이 좋아하는 캐릭터를 만들고, 브랜드와 함께하는 일도 기다리고 있어요.</p>
+          </div>
+        </div>
+        <div class="circle-menu reveal" aria-label="바로 가기">
+          <a class="circle-btn" href="#about">소개</a>
+          <a class="circle-btn" href="#characters">캐릭터</a>
+          <a class="circle-btn" href="#gallery">갤러리</a>
+          <a class="circle-btn" href="#contact">문의</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. 캐릭터 카드 -->
+    <section class="section cards-section" id="characters">
+      <div class="container">
+        <div class="title reveal">
+          <span class="label">Characters</span>
+          <h2>새콤달콤 <span class="hl-coral">친구들</span>을 만나요</h2>
+          <div class="rule" aria-hidden="true"></div>
+        </div>
+      </div>
+      <div class="cards reveal" tabindex="0" aria-label="캐릭터 카드 목록, 옆으로 밀어서 보세요">
+        <article class="card"><div class="card-photo"><img src="images/nana-cat.png" alt="나나 고양이"></div><h3>나나 고양이</h3></article>
+        <article class="card"><div class="card-photo"><img src="images/character-2.png" alt="" onerror="this.remove()"><span>사진 자리</span></div><h3>곧 만나요 2</h3></article>
+        <article class="card"><div class="card-photo"><img src="images/character-3.png" alt="" onerror="this.remove()"><span>사진 자리</span></div><h3>곧 만나요 3</h3></article>
+        <article class="card"><div class="card-photo"><img src="images/character-4.png" alt="" onerror="this.remove()"><span>사진 자리</span></div><h3>곧 만나요 4</h3></article>
+        <article class="card"><div class="card-photo"><img src="images/character-5.png" alt="" onerror="this.remove()"><span>사진 자리</span></div><h3>곧 만나요 5</h3></article>
+        <article class="card"><div class="card-photo"><img src="images/character-6.png" alt="" onerror="this.remove()"><span>사진 자리</span></div><h3>곧 만나요 6</h3></article>
+      </div>
+      <div class="container"><p class="hint reveal">← 옆으로 밀어서 더 보세요 →</p></div>
+    </section>
+
+    <!-- 5. 사진 모자이크 -->
+    <section class="section" id="gallery">
+      <div class="container">
+        <div class="title reveal">
+          <span class="label">Gallery</span>
+          <h2>구경하는 <span class="hl-green">재미</span></h2>
+          <div class="rule" aria-hidden="true"></div>
+        </div>
+        <div class="mosaic reveal">
+          <div class="tile t1 contain"><img src="images/nana-cat.png" alt="나나 고양이"></div>
+          <div class="tile t2"><img src="images/gallery-2.jpg" alt="" onerror="this.remove()"><span>사진 자리</span></div>
+          <div class="tile t3"><img src="images/gallery-3.jpg" alt="" onerror="this.remove()"><span>사진 자리</span></div>
+          <div class="tile word a">함께<br>놀아요!</div>
+          <div class="tile t5"><img src="images/gallery-5.jpg" alt="" onerror="this.remove()"><span>사진 자리</span></div>
+          <div class="tile word b">새 소식은<br>곧 도착!</div>
+          <div class="tile t7"><img src="images/gallery-7.jpg" alt="" onerror="this.remove()"><span>사진 자리</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 6. 푸터 -->
+  <footer class="site-footer" id="contact">
+    <div class="container">
+      <div class="footer-row">
+        <div>
+          <p class="footer-title">스튜디오 나나</p>
+          <div class="email-row">
+            <span>이메일</span>
+            <!-- TODO: 진짜 이메일 주소로 바꾸세요 (script.js 의 EMAIL 한 곳만 바꾸면 돼요) -->
+            <a class="email-text" id="emailText" href="mailto:hello@studionana.example">hello@studionana.example</a>
+            <button class="copy-btn" id="copyBtn" type="button">주소 복사</button>
+          </div>
+          <p class="copy-msg" id="copyMsg" role="status" aria-live="polite"></p>
+        </div>
+        <a class="sns" href="https://www.youtube.com/@nana_cat_kr" target="_blank" rel="noopener" aria-label="유튜브 열기 (새 창)">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>
+        </a>
+      </div>
+      <p class="small-note">© 2026 스튜디오 나나 · 이 홈페이지의 그림과 글은 허락 없이 쓸 수 없어요.</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <button class="to-top" id="toTop" type="button" aria-label="맨 위로 가기">↑</button>
+
+  <script src="script.js?v=1"></script>
+</body>
+</html>
