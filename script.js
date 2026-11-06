@@ -97,6 +97,30 @@ if (!reduceMotion) {
   }, { passive: true });
 }
 
+// --- 고양이 랜덤 동작: 마우스를 올리거나 누르면 ---
+// 동작을 더 넣고 싶으면 이름을 여기에 추가하고, style.css 에 move-이름 · cat-이름 을 만드세요
+const CAT_MOVES = ["jump", "wag", "spin", "squish", "shake", "hop"];
+const cat = document.getElementById("cat");
+const catImg = cat.querySelector("img");
+let catBusy = false;
+let lastMove = "";
+function playCatMove() {
+  if (catBusy || reduceMotion) return;           // 움직이는 중이거나 '움직임 줄이기'면 쉬기
+  const choices = CAT_MOVES.filter((m) => m !== lastMove);  // 같은 동작이 연달아 나오지 않게
+  lastMove = choices[Math.floor(Math.random() * choices.length)];
+  catBusy = true;
+  catImg.classList.add("move-" + lastMove);
+  catImg.addEventListener("animationend", () => {
+    catImg.classList.remove("move-" + lastMove);
+    catBusy = false;
+  }, { once: true });
+}
+cat.addEventListener("mouseenter", playCatMove);
+cat.addEventListener("click", playCatMove);      // 휴대폰은 누르면 움직여요
+cat.addEventListener("keydown", (event) => {     // 키보드: Enter · 스페이스
+  if (event.key === "Enter" || event.key === " ") { event.preventDefault(); playCatMove(); }
+});
+
 // --- 맨 위로 가기 ---
 const toTop = document.getElementById("toTop");
 window.addEventListener("scroll", () => toTop.classList.toggle("show", window.scrollY > 500), { passive: true });
